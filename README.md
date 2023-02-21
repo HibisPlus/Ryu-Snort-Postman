@@ -77,12 +77,17 @@ Snort
  Postman
  ==========
  
- 1.查看連接到的switch
+ 1.查看連接到的switch 
+  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/get-switch.png)
+
+ 2.取得switch的狀態
+  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/flow-table state.png)
  
- ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/get-switch.png)
-   
- 
- 2.將符合條件的流量drop
+ 3.新增flow規則
+  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/flow-rule.png)
+  
+ 4.更新後的flow table
+  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/new-table.png)
  
  
  
