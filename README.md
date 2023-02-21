@@ -43,7 +43,8 @@ Mininet
  
  此指令在查看 s1 的 Flow table
  
-   3. Ryu Controller 配置
+Ryu Controller 配置
+==========
    
     sudo Ryu-manager simple_switch_snort.py dns.py
 
@@ -53,11 +54,14 @@ Mininet
     # True : unixsock domain socket server
     # False : network socket server
 
-  4. Snort規則
+Snort
+==========
+
+  1. Snort規則
   
     alert udp $EXTERNAL_NET 53 <> $HOME_NET any (msg:"WannaCry DNS Query"; content:"03 77 77 77 29 69 75 71 65 72|"; offset:36; depth:59; sid:1000024; rev:01)
  
-  5. 啟動 Snort
+  2. 啟動 Snort
   
 分為兩個階段進行：
 
@@ -69,6 +73,13 @@ Mininet
  
     sudo snort -i s1-eth1 -c /etc/snort/snort.conf -A unsock
  
+ 
+ Postman
+ ==========
+ 
+ 1.查看flowtable
+ 
+ 2.將符合條件的流量drop
  
  
  
