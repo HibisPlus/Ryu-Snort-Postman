@@ -79,6 +79,8 @@ Snort
  
  1.查看flowtable
  
+   
+ 
  2.將符合條件的流量drop
  
  
