@@ -77,8 +77,8 @@ Snort
  Postman
  ==========
  
- 1.查看flowtable
- 
+ 1.查看連接到的switch
+   ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/get switch.png)
    
  
  2.將符合條件的流量drop
