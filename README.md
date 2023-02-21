@@ -78,7 +78,7 @@ Snort
  ==========
  
  1.查看連接到的switch
-   ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/get switch.png)
+   https://github.com/HibisPlus/Ryu-Snort-Postman/blob/f0dc88458c07bdb642c416f91e53b1a9d7666a0f/get%20switch.png
    
  
  2.將符合條件的流量drop
