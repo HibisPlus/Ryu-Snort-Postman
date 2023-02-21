@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "5c338019-f03a-4e75-bc2d-d1cd1714e006",
+		"name": "ryu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all switches on controller",
+			"_postman_id": "0f015a8c-14ca-4cfe-aabe-0284c302864a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8080/stats/switches",
+				"description": "Get all switches connect to the controller"
+			},
+			"response": []
+		},
+		{
+			"name": "Get s1 flow table",
+			"_postman_id": "94690d55-adc3-42a2-bd39-73db77dd9499",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8080/stats/flow/1",
+				"description": "Get s1 flowtable"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all flow stats, filtered",
+			"_postman_id": "2dddea7d-d7d1-45bb-aeff-196ff56db354",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/stats/flow/1",
+				"description": "Use a filter to receive certain flows"
+			},
+			"response": []
+		},
+		{
+			"name": "add flow rule",
+			"_postman_id": "07bb3686-6911-42ca-b9f0-da81a61b905b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dpid\": 1,\n    \"priority\":45000,\n    \"idle_timeout\":10,\n    \"match\":{\n        \"in_port\":1\n    },\n    \"action\":[]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/stats/flowentry/add",
+				"description": "add flow rule to drop packet from port1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete flow",
+			"_postman_id": "8c01a467-d020-4efd-b826-de7e52b587a9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dpid\":1,\n    \"cookie\":0,\n    \"idle_timeout\":0,\n    \"hard_timeout\":0,\n    \"priority\":1,\n    \"table_id\":0, \n    \"actions\": [\n            \"OUTPUT:1\"\n    ],\n    \"match\": {\n        \"in_port\": 2,\n        \"dl_src\": \"00:00:00:00:00:02\",\n        \"dl_dst\": \"00:00:00:00:00:01\"\n    },\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8080/stats/flowentry/delete_strict",
+				"description": "Delete flow"
+			},
+			"response": []
+		}
+	]
+}
