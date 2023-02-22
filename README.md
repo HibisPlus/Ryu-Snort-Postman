@@ -94,7 +94,16 @@ Snort
  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/new-table.png)
  
  
+現在進度：
+============
  
+1. 發現問題：https://stackoverflow.com/questions/71202679/how-to-drop-all-snort-alarts-that-intergration-with-ryu-controller
+
+從上述網址中可發現，在Snort與Ryu測試接通時的顯示是有問題的，可能因此導致後續正式連接時Ryu無法正常顯示。
+
+2. 細微更動：https://www.cnblogs.com/dream397/p/13150677.html
+
+由上述網址中，大致操作相同，但有些細部設定是學生沒有做過的，因此打算由此網站的操作，一步一步進行，期望發現問題所在。
  
  
  
