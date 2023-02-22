@@ -97,7 +97,7 @@ Snort
 現在進度：
 ============
  
-1. 發現問題：https://stackoverflow.com/questions/71202679/how-to-drop-all-snort-alarts-that-intergration-with-ryu-controller
+1. 發現問題：https://stackoverflow.com/questions/75058364/ryu-snort-integration-ryu-snortlib-py-event-alert-returns-bytes-instead-of-stri
 
 從上述網址中可發現，在Snort與Ryu測試接通時的顯示是有問題的，可能因此導致後續正式連接時Ryu無法正常顯示。
 
