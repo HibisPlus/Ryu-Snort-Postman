@@ -79,7 +79,7 @@ Snort
  
  1.查看連接到的switch 
  
- ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/get-switch.png)
+ ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/main/Image/get-switch.jpg)
 
  2.取得switch的狀態
  
@@ -91,7 +91,7 @@ Snort
   
  4.更新後的flow table
  
- ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/new-table.png)
+ ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/main/Image/new-table.jpg)
  
  
 現在進度：
