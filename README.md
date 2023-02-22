@@ -87,7 +87,7 @@ Snort
  
  3.新增flow規則
  
- ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/flow-rule.png)
+ ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/main/Image/flow-rule.jpg)
   
  4.更新後的flow table
  
