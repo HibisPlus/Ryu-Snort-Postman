@@ -83,7 +83,7 @@ Snort
 
  2.取得switch的狀態
  
- ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/master/flow-table-state.png)
+ ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/main/Image/flow-tablestate.jpg)
  
  3.新增flow規則
  
