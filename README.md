@@ -94,7 +94,7 @@ Snort
  ![image](https://github.com/HibisPlus/Ryu-Snort-Postman/blob/main/Image/new-table.jpg)
  
  
-現在進度：
+2/22：
 ============
  
 1. 發現問題：https://stackoverflow.com/questions/75058364/ryu-snort-integration-ryu-snortlib-py-event-alert-returns-bytes-instead-of-stri
@@ -102,6 +102,25 @@ Snort
 從上述網址中可發現，在Snort與Ryu測試接通時的顯示是有問題的，可能因此導致後續正式連接時Ryu無法正常顯示。
 
 2. 細微更動：https://www.cnblogs.com/dream397/p/13150677.html
+
+
+2/24：
+============
+1. 透過2/22發現的問題中，指出會在simple_switch_snort.py檔中修改一段print，程式碼如下：
+  
+       69  def _dump_alert(self, ev):
+       70    msg = ev.msg
+       71
+       72    print('alertmsg: %s' % ''.join(msg.alertmsg))
+       73
+       74    self.packet_print(msg.pkt)
+
+而修改內容為在第72行中 ''.join 前加入b，如下：
+       72    print('alertmsg: %s' % b''.join(msg.alertmsg))
+       
+但最終結果會如網址中所呈現的問題，無法正確呈現出網址中的alert，目前正著手於解決此問題。
+
+2. ovs安裝遭遇問題：
 
 前面在進行配置時尚未依據mininet的環境去架設，導致mininet開啟後配置不正確，所以進行第一次的虛機重灌，在install ryu的時候有出錯，嘗試修正錯誤的時候發現沒有用，於是跟澤瑋借用CDX的機器做測試發現可行，於是進行第二次重灌虛機，已成功安裝，目前進行到part3，假日時會再利用時間去完成剩下的部分。
  
