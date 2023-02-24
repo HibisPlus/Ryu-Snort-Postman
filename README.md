@@ -116,6 +116,7 @@ Snort
        74    self.packet_print(msg.pkt)
 
 而修改內容為在第72行中 ''.join 前加入b，如下：
+
        72    print('alertmsg: %s' % b''.join(msg.alertmsg))
        
 但最終結果會如網址中所呈現的問題，無法正確呈現出網址中的alert，目前正著手於解決此問題。
