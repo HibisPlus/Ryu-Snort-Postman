@@ -10,6 +10,23 @@
 Mininet
 ===========
 
+安裝：
+
+      sudo apt-get update
+      
+      sudo apt-get upgrade
+      
+      reboot
+      
+      sudo apt-get install git
+      
+      sudo git https://github.com/mininet/mininet
+      
+      cd mininet/util/
+      
+      ./install.sh -a
+
+
    1. 拓樸建立：
     
      sudo mn --topo single,3 --mac --switch ovsk --controller remote --nat
