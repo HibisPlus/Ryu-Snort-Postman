@@ -92,6 +92,32 @@ Ryu Controller 配置
 Snort
 ==========
 
+安裝：
+
+  1. 安裝需要的插件
+
+      sudo apt-get install build-essential libpcap-dev libpcre3-dev libnet1-dev zlib1g-dev luajit hwloc libdnet-dev libdumbnet-dev bison flex liblzma-dev openssl libssl-dev pkg-config libhwloc-dev cmake cpputest libsqlite3-dev uuid-dev libcmocka-dev libnetfilter-queue-dev libmnl-dev autotools-dev libluajit-5.1-dev libunwind-dev
+      
+  2. 安裝daq-2.0.6與snort-2.9.16 (下載壓縮檔至ubuntu中)
+  
+解壓縮後至daq-2.0.6資料夾輸入下列指令：
+      
+      ./configure
+      
+      make
+      
+      sudo make install
+      
+安裝完daq後至snort-2.9.16資料夾輸入同樣指令：
+
+      ./configure
+      
+      make
+      
+      sudo make install
+  
+  
+
   1. Snort規則
   
     alert udp $EXTERNAL_NET 53 <> $HOME_NET any (msg:"WannaCry DNS Query"; content:"03 77 77 77 29 69 75 71 65 72|"; offset:36; depth:59; sid:1000024; rev:01)
