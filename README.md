@@ -62,7 +62,25 @@ Mininet
  
 Ryu Controller 配置
 ==========
-   
+
+安裝
+
+      sudo apt-get install python3-pip
+      
+      sudo apt-get install python3-setuptools
+      
+      sudo pip3 install ryu
+      
+      sudo git clone https://github.com/osrg/ryu.git
+      
+      cd ryu/
+      
+      sudo python3 ./setup.py install
+      
+      sudo pip3 install -r tools/pip-requires
+
+
+
     sudo Ryu-manager simple_switch_snort.py dns.py
 
 為了使Snort利用unsock模式與Ryu Controller連接，在simple_switch_snort.py中，需進行下列更動：
