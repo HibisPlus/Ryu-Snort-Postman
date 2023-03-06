@@ -79,7 +79,7 @@ Ryu Controller 配置
       
       sudo pip3 install -r tools/pip-requires
 
-
+啟動ryu：
 
     sudo Ryu-manager simple_switch_snort.py dns.py
 
