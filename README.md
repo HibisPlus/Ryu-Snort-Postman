@@ -98,9 +98,9 @@ Snort
 
       sudo apt-get install build-essential libpcap-dev libpcre3-dev libnet1-dev zlib1g-dev luajit hwloc libdnet-dev libdumbnet-dev bison flex liblzma-dev openssl libssl-dev pkg-config libhwloc-dev cmake cpputest libsqlite3-dev uuid-dev libcmocka-dev libnetfilter-queue-dev libmnl-dev autotools-dev libluajit-5.1-dev libunwind-dev
       
-  2. 安裝daq-2.0.6與snort-2.9.16 (下載壓縮檔至ubuntu中)
+  2. 安裝daq-2.0.7與snort-2.9.16 (下載壓縮檔至ubuntu中)
   
-解壓縮後至daq-2.0.6資料夾輸入下列指令：
+解壓縮後至daq-2.0.7資料夾輸入下列指令：
       
       ./configure
       
